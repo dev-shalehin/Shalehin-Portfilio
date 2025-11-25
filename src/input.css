@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00adb5;
+  --color-deep-800: #222831;
+  --color-deep-500: #393e46;
+  --color-deep-op50: #393e4695;
+  --color-light-200: #eeeeee;
+
+  --font-popping: "Poppins", sans-serif;
+}
+
+@layer components {
+  .navBar {
+    @apply md:relative md:top-auto md:right-auto md:bg-transparent absolute top-18 -right-full transition-all 
+    ease-in-out delay-150 bg-deep-500 pt-5 pb-5 pr-10 w-[50%] md:h-auto h-40 rounded-[5px] text-right;
+  }
+  .container {
+    @apply lg:w-[90vw] md:w-[80vw] w-[95vw] ml-auto mr-auto md:pl-0 md:pr-0 pl-3 pr-3;
+  }
+  .hero--title {
+    @apply text-white font-bold md:text-8xl text-4xl uppercase text-center md:text-left md:after:content-[''] md:after:bg-[url(./image/hero_arrow.png)] md:after:absolute after:left-0 after:top-5 after:w-20 after:h-full after:bg-no-repeat after:bg-center;
+  }
+  .inner--title {
+    @apply md:text-5xl text-white font-bold text-3xl md:text-left text-center;
+  }
+}
